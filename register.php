@@ -140,7 +140,7 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="password">Password</label>
+                                        <label for="password">Confirm Password</label>
                                         <input type="password" class="form-control" id="password"
                                             placeholder="Confirm password" name="confirm_password" >
                                     </div>

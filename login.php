@@ -110,8 +110,8 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="pwd">Password</label>
-                                        <input type="password" class="form-control" id="pwd"
-                                            placeholder="Enter password" name="pswd" required="required" maxlength="30">
+                                        <input type="password" class="form-control" id="password"
+                                            placeholder="Enter password" name="password" required="required" maxlength="30">
                                     </div>
                                     <button type="submit" class="btn btn-danger">Login</button>
 

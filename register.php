@@ -1,3 +1,8 @@
+<?php
+
+    session_start();
+
+?>
 <!doctype html>
 <html class="no-js" lang="zxx">
 
@@ -96,22 +101,28 @@
                             <span></span>
                             <div class="container p-3 my-3 bg-warning text-white">
                                 <h2 class="text-white mb-20 p-1">Registration</h2>
-                                <form action="/action_page.php">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <label for="text">First Name</label>
-                                            <input type="text" class="form-control mb-20" id="text"
-                                                placeholder="Enter first name" name="firstname" required="required">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label for="text">Last Name</label>
-                                            <input type="text" class="form-control mb-20" id="text"
-                                                placeholder="Enter last name" name="lastname" required="required">
-                                        </div>
+                                <form action="register_db.php" method=POST>
+                                
+                                <?php if (isset($_SESSION['success'])) { ?>
+                                    <div class="alert alert-success" role="alert">
+                                        <?php
+                                            echo $_SESSION['success'];
+                                            unset($_SESSION['success']);
+                                        ?>
                                     </div>
+                                <?php } ?> 
+
+                                <?php if (isset($_SESSION['success'])) { ?>
+                                    <div class="alert alert-danger" role="alert">
+                                        <?php
+                                            echo $_SESSION['error'];
+                                            unset($_SESSION['error']);
+                                        ?>
+                                    </div>
+                                <?php } ?>    
 
                                     <div class="form-group">
-                                        <label for="text">Username</label>
+                                        <label for="username">Username</label>
                                         <input type="text" class="form-control p-1" id="text"
                                             placeholder="Enter username" name="username" required="required"
                                             maxlength="20">
@@ -124,16 +135,17 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="pwd">Password</label>
-                                        <input type="password" class="form-control" id="pwd"
-                                            placeholder="Enter password" name="pswd" required="required" maxlength="30">
+                                        <input type="password" class="form-control" id="password"
+                                            placeholder="Enter password" name="password" required="required" maxlength="30">
                                     </div>
-                                    <div class="form-group form-check">
-                                        <label class="form-check-label">
-                                            <input class="form-check-input" type="checkbox" name="agree" required="required"> I agree with
-                                            terms and conditions
-                                        </label>
+
+                                    <div class="form-group">
+                                        <label for="pwd">Password</label>
+                                        <input type="password" class="form-control" id="password"
+                                            placeholder="Confirm password" name="confirm_password" required="required" maxlength="30">
                                     </div>
-                                    <button type="submit" class="btn btn-danger">Register</button>
+
+                                    <button name="register" type="submit" class="btn btn-danger">Register</button>
                                 </form>
                             </div>
                         </div>

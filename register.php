@@ -101,7 +101,7 @@
                             <span></span>
                             <div class="container p-3 my-3 bg-warning text-white">
                                 <h2 class="text-white mb-20 p-1">Registration</h2>
-                                <form action="register_db.php" method=POST>
+                                <form action="register_db.php" method="POST">
                                 
                                 <?php if (isset($_SESSION['success'])) { ?>
                                     <div class="alert alert-success" role="alert">
@@ -124,25 +124,25 @@
                                     <div class="form-group">
                                         <label for="username">Username</label>
                                         <input type="text" class="form-control p-1" id="text"
-                                            placeholder="Enter username" name="username" required="required"
-                                            maxlength="20">
+                                            placeholder="Enter username" name="username"
+                                            >
                                     </div>
 
                                     <div class="form-group">
                                         <label for="email">Email</label>
                                         <input type="email" class="form-control" id="email" placeholder="Enter email"
-                                            name="email" required="required">
+                                            name="email">
                                     </div>
                                     <div class="form-group">
-                                        <label for="pwd">Password</label>
+                                        <label for="password">Password</label>
                                         <input type="password" class="form-control" id="password"
-                                            placeholder="Enter password" name="password" required="required" maxlength="30">
+                                            placeholder="Enter password" name="password" >
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="pwd">Password</label>
+                                        <label for="password">Password</label>
                                         <input type="password" class="form-control" id="password"
-                                            placeholder="Confirm password" name="confirm_password" required="required" maxlength="30">
+                                            placeholder="Confirm password" name="confirm_password" >
                                     </div>
 
                                     <button name="register" type="submit" class="btn btn-danger">Register</button>

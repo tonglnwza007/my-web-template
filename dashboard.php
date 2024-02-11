@@ -1,13 +1,17 @@
 <?php
 
     session_start();
+    require "config.php";
+
+    if (!isset($_SESSION['user_id'])) {
+        header("Location: login.php");
+    }
 
 ?>
 <!doctype html>
 <html class="no-js" lang="zxx">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>PetCare</title>
@@ -74,12 +78,6 @@
                                         </ul>
                                     </nav>
                                 </div>
-                                <div class="header-right-btn f-right d-none d-lg-block ml-30">
-                                    <a href="register.php" class="header-btn h5 text-white">Register</a>
-                                </div>
-                                <div class="header-right-btn f-right d-none d-lg-block ml-30">
-                                    <a href="login.php" class="header-btn h5 text-white">Login</a>
-                                </div>
                             </div>
                         </div>
                         <!-- Mobile Menu -->
@@ -90,60 +88,39 @@
                 </div>
             </div>
         </div>
+
         <!-- Header End -->
     </header>
     <main>
-        <!--? Login Start -->
-        <div class="our-services section-padding30">
-            <div class="container">
-                <div class="row justify-content-sm-center">
-                    <div class="cl-xl-7 col-lg-8 col-md-10">
-                        <!-- Section Tittle -->
-                        <div class="section-tittle text-center mb-70">
-                            <span></span>
-                            <div class="container p-3 my-3 bg-warning text-white">
-                                <h2 class="text-white">Login</h2>
-                                <form action="login_db.php" method="POST">
+        <!--Hero Start-->
+        <div class="px-4 py-5 my-5 text-center">
+        <?php
+            if (isset($_SESSION['user_id'])) {
+                $user_id = $_SESSION['user_id'];
 
-                                <?php if (isset($_SESSION['error'])) { ?>
-                                    <div class="alert alert-danger" role="alert">
-                                        <?php
-                                            echo $_SESSION['error'];
-                                            unset($_SESSION['error']);
-                                        ?>
-                                    </div>
-                                <?php } ?>
+            }
 
-                                    <div class="container">
-                                        <img src="assets/img/logo/petcarelogo.jpg" class="rounded-circle p-2 mb-10"
-                                            alt="Cinque Terre" width="120" height="120">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="username">Username</label>
-                                        <input type="text" class="form-control" id="text" placeholder="Enter username"
-                                            name="username" >
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="password">Password</label>
-                                        <input type="password" class="form-control" id="password"
-                                            placeholder="Enter password" name="password" >
-                                    </div>
-                                    <button name="login" type="submit" class="btn btn-danger">Login</button>
+            try {
 
+                $stmt = $pdo->prepare("SELECT * FROM users WHERE id = ?");
+                $stmt->execute(['$user_id']);
+                $userData = $stmt->fetch();
 
-                                </form>
-                            </div>
+            } catch (PDOException $e) {
+                echo "Error: " . $e->getMessage();
+            }
+        ?>
+                    <h1 class="display-5 fw-bold text-body-emphasis">Welcome, <?php echo $userData['username'] ?></h1>
+                    <div class="col-lg-6 mx-auto">
+                        <p class="lead mb-4">Email : <?php echo $userData['email'] ?></p>
+ 
+                    <a href="profile.php" class="btn btn-danger">edit your profile</a>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <!-- Login End -->
-
-    </main>
+        <!--Hero End-->
     <footer>
-       <!-- Footer Start-->
-       <div class="footer-area footer-padding">
+        <!-- Footer Start-->
+        <div class="footer-area footer-padding">
             <div class="container">
                 <div class="row d-flex justify-content-between">
                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
@@ -191,7 +168,6 @@
         </div>
         <!-- Footer End-->
     </footer>
-
     <!-- Scroll Up -->
     <div id="back-top">
         <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
@@ -229,7 +205,6 @@
     <!-- Jquery Plugins, main Jquery -->
     <script src="./assets/js/plugins.js"></script>
     <script src="./assets/js/main.js"></script>
-
 
 </body>
 

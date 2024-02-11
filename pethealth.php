@@ -46,7 +46,7 @@
                         <!-- Logo -->
                         <div class="col-xl-2 col-lg-2 col-md-1">
                             <div class="logo">
-                                <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                                <a href="index.php"><img src="assets/img/logo/logo.png" alt=""></a>
                             </div>
                         </div>
                         <div class="col-xl-10 col-lg-10 col-md-10">
@@ -55,13 +55,13 @@
                                 <div class="main-menu f-right d-none d-lg-block">
                                     <nav>
                                         <ul id="navigation">
-                                            <li><a href="index.html">
+                                            <li><a href="index.php">
                                                     <h5>Home</h5>
                                                 </a></li>
-                                            <li><a href="about.html">
+                                            <li><a href="about.php">
                                                     <h5>About</h5>
                                                 </a></li>
-                                            <li><a href="services.html">
+                                            <li><a href="services.php">
                                                     <h5>Services</h5>
                                                 </a></li>
                                         </ul>
@@ -108,7 +108,7 @@
                             <div class="single-footer-caption mb-30">
                                 <!-- logo -->
                                 <div class="footer-logo mb-25">
-                                    <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
+                                    <a href="index.php"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
                                 </div>
                                 <div class="footer-tittle">
                                     <div class="footer-pera">
@@ -123,9 +123,9 @@
                             <div class="footer-tittle">
                                 <h4>Menu</h4>
                                 <ul>
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="about.html">About Us</a></li>
-                                    <li><a href="services.html">Services</a></li>
+                                    <li><a href="index.php">Home</a></li>
+                                    <li><a href="about.php">About Us</a></li>
+                                    <li><a href="services.php">Services</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -135,10 +135,10 @@
                             <div class="footer-tittle">
                                 <h4>Services</h4>
                                 <ul>
-                                    <li><a href="petprofile.html">Pet Profile</a></li>
-                                    <li><a href="pethealth.html">Pet Health</a></li>
-                                    <li><a href="pettag.html">Pet Tag</a></li>
-                                    <li><a href="shopandclinic.html">Shop and Clinic</a></li>
+                                    <li><a href="petprofile.php">Pet Profile</a></li>
+                                    <li><a href="pethealth.php">Pet Health</a></li>
+                                    <li><a href="pettag.php">Pet Tag</a></li>
+                                    <li><a href="shopandclinic.php">Shop and Clinic</a></li>
                                 </ul>
                             </div>
                         </div>

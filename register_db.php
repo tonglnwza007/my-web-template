@@ -8,11 +8,11 @@
         $username = $_POST['username'];
         $email = $_POST['email'];
         $password = $_POST['password'];
-        $confirmpassword = $_POST['confirm_password'];
+        $confirmPassword = $_POST['confirm_password'];
     }
 
     if (empty($username)) {
-        $_SESSION['error'] = "Please enter yyou username";
+        $_SESSION['error'] = "Please enter your username";
         header("location: register.php");
     } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $_SESSION['error'] = "Please enter a valid email";
@@ -25,12 +25,12 @@
         header("location: register.php");
     } else {
 
-        $checkUsername = $pdo->prepare("SELECT COUNT(*) FORM users WHERE username = ?");
-        $checkUsername->$_execute([$username]);
+        $checkUsername = $pdo->prepare("SELECT COUNT(*) FROM users WHERE username = ?");
+        $checkUsername->execute([$username]);
         $userNameExists = $checkUsername->fetchcolumn();
 
-        $checkEmail = $pdo->prepare("SELECT COUNT(*) FORM users WHERE email = ?");
-        $checkEmail->$_execute([$email]);
+        $checkEmail = $pdo->prepare("SELECT COUNT(*) FROM users WHERE email = ?");
+        $checkEmail->execute([$email]);
         $userEmailExists = $checkEmail->fetchcolumn();
     
         if ($userNameExists) {
@@ -45,7 +45,7 @@
 
         try {
 
-            $stmt = $pdo->prepare("INSERT INTO user(username, email, password) VALUES(?, ?, ? )");
+            $stmt = $pdo->prepare("INSERT INTO users(username, email, password) VALUES(?, ?, ? )");
             $stmt->execute([$username, $email, $hashedPassword]);
 
             $_SESSION['success'] = "Registration Successfully";

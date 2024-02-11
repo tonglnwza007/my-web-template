@@ -112,7 +112,7 @@
                                     </div>
                                 <?php } ?> 
 
-                                <?php if (isset($_SESSION['success'])) { ?>
+                                <?php if (isset($_SESSION['error'])) { ?>
                                     <div class="alert alert-danger" role="alert">
                                         <?php
                                             echo $_SESSION['error'];

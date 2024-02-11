@@ -154,7 +154,7 @@
                             <div class="single-footer-caption mb-30">
                                 <!-- logo -->
                                 <div class="footer-logo mb-25">
-                                    <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
+                                    <a href="index.php"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
                                 </div>
                                 <div class="footer-tittle">
                                     <div class="footer-pera">
@@ -169,9 +169,9 @@
                             <div class="footer-tittle">
                                 <h4>Menu</h4>
                                 <ul>
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="about.html">About Us</a></li>
-                                    <li><a href="services.html">Services</a></li>
+                                    <li><a href="index.php">Home</a></li>
+                                    <li><a href="about.php">About Us</a></li>
+                                    <li><a href="services.php">Services</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -181,10 +181,10 @@
                             <div class="footer-tittle">
                                 <h4>Services</h4>
                                 <ul>
-                                    <li><a href="petprofile.html">Pet Profile</a></li>
-                                    <li><a href="pethealth.html">Pet Health</a></li>
-                                    <li><a href="pettag.html">Pet Tag</a></li>
-                                    <li><a href="shopandclinic.html">Shop and Clinic</a></li>
+                                    <li><a href="petprofile.php">Pet Profile</a></li>
+                                    <li><a href="pethealth.php">Pet Health</a></li>
+                                    <li><a href="pettag.php">Pet Tag</a></li>
+                                    <li><a href="shopandclinic.php">Shop and Clinic</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -192,6 +192,7 @@
                 </div>
             </div>
         </div>
+    </footer>
         <!-- Footer End-->
     </footer>
     <!-- Scroll Up -->

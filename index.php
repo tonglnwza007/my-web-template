@@ -339,6 +339,7 @@
                 </div>
             </div>
         </div>
+        <!-- Footer End-->
     </footer>
     <!-- Scroll Up -->
     <div id="back-top">

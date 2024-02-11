@@ -1,0 +1,17 @@
+.container input{
+    width: 100%;
+    height: 50px;
+    border: 1px solid #d4403a;
+    outline: 0;
+    padding: 10px;
+    margin: 10px 0 20px;
+    border-radius: 5px;
+}
+#profileFormContainer img {
+    border-radius: 50%;
+    max-width: 100%; /* ทำให้รูปภาพมีขนาดไม่เกินความกว้างของตัว element ที่ครอบ */
+    max-height: 150px; /* ปรับตามความสูงที่ต้องการ */
+    width: auto;
+    height: auto;
+    margin-bottom: 20px;
+}
